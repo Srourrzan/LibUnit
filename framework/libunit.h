@@ -6,7 +6,7 @@
 # include <sys/wait.h>   // waitpid, WIFEXITED, WEXITSTATUS, WIFSIGNALED, WTERMSIG
 # include <stdlib.h>     // malloc, free, exit (explicitly allowed)
 # include <signal.h>     // SIGSEGV, SIGBUS, and others for bonus
-# include "...libft/libft.h"
+# include "../libft/libft.h"
 
 // test result status codes
 // // These are internal codes used by the framework to represent test outcomes.

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   load_test.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: modat <modat@student.42.fr>                +#+  +:+       +#+        */
+/*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 16:43:12 by modat             #+#    #+#             */
-/*   Updated: 2025/07/18 16:47:51 by modat            ###   ########.fr       */
+/*   Updated: 2025/07/19 13:34:52 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	load_test(t_list **test_list, const char *test_name,
 	if (!new_node)
 	{
 		ft_putendl_fd("Error: Memory allocation failed for list node.", 2);
-		free(new_unit_test->test_name, new_unit_test);
+		free(new_unit_test->test_name);//, new_unit_test);
 		exit(EXIT_FAILURE);
 	}
 	ft_lstadd_back(test_list, new_node);

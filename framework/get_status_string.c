@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_status_string.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: modat <modat@student.42.fr>                +#+  +:+       +#+        */
+/*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 16:43:06 by modat             #+#    #+#             */
-/*   Updated: 2025/07/18 16:43:07 by modat            ###   ########.fr       */
+/*   Updated: 2025/07/19 13:43:32 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,26 @@
 
 char	*get_status_string(int status_code)
 {
-	switch (status_code)
-	{
-	case LU_OK:
+	if (status_code == LU_OK)
 		return ("OK");
-	case LU_KO:
+	else if (status_code == LU_KO)
 		return ("KO");
-	case SIGSEGV:
+	else if (status_code == SIGSEGV)
 		return ("SIGSEGV");
-	case SIGBUS:
+	else if (status_code == SIGBUS)
 		return ("SIGBUS");
-	case LU_TIMEOUT:
+	else if (status_code == LU_TIMEOUT)
 		return ("TIMEOUT");
-	case SIGABRT:
+	else if (status_code == SIGABRT)
 		return ("SIGABRT");
-	case SIGFPE:
+	else if (status_code == SIGFPE)
 		return ("SIGFPE");
-	case SIGPIPE:
+	else if (status_code == SIGPIPE)
 		return ("SIGPIPE");
-	case SIGILL:
+	else if (status_code == SIGILL)
 		return ("SIGILL");
-	case LU_ERROR:
+	else if (status_code == LU_ERROR)
 		return ("ERROR");
-	default:
+	else
 		return ("UNKNOWN STATUS");
-	}
 }
