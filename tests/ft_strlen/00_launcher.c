@@ -6,16 +6,12 @@
 /*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 17:42:21 by rsrour            #+#    #+#             */
-/*   Updated: 2025/07/19 19:29:05 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/07/19 19:47:07 by rsrour           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../framework/libunit.h"
-
-int ft_strlen_ok_test(void);
-int	ft_strlen_ko_test(void);
-int		ft_strlen_segv_test(void);
-int ft_strlen_segbus_test(void);
+#include "../tests.h"
 
 int ft_strlen_launcher(void)
 {
