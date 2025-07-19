@@ -6,7 +6,7 @@
 /*   By: modat <modat@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 16:42:45 by modat             #+#    #+#             */
-/*   Updated: 2025/07/19 18:26:39 by modat            ###   ########.fr       */
+/*   Updated: 2025/07/19 21:58:29 by modat            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	analyze_exit_status(int status)
 	return (LU_ERROR);
 }
 
-static int	run_single_test(const char *suite, t_unit_test *test)
+static int	run_single_test(char *suite, t_unit_test *test)
 {
 	pid_t	pid;
 	int		status;
@@ -70,7 +70,7 @@ static void	clear_tests(t_list **test_list)
 	ft_lstclear(test_list, free_unit_test_content);
 }
 
-int	launch_tests(const char *suite_name, t_list **test_list)
+int	launch_tests(char *suite_name, t_list **test_list)
 {
 	t_list		*node;
 	t_unit_test	*test_data;
