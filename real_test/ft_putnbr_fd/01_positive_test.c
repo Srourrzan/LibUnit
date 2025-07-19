@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   01_positive_test.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: modat <modat@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 00:35:51 by rsrour            #+#    #+#             */
-/*   Updated: 2025/07/19 19:53:18 by modat            ###   ########.fr       */
+/*   Created: 2025/07/19 20:10:30 by modat             #+#    #+#             */
+/*   Updated: 2025/07/19 20:10:37 by modat            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../../libft/libft.h"
 #include <unistd.h>
 
-int main(void)
+int	putnbr_fd_positive_test(void)
 {
-    char *str = "Hello, World!\n";
-    write(1, str, 14);
-    return (0);
+	ft_putnbr_fd(42, STDOUT_FILENO);
+	return (0);
 }

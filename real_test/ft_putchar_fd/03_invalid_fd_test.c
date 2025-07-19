@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   03_invalid_fd_test.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: modat <modat@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 00:35:51 by rsrour            #+#    #+#             */
-/*   Updated: 2025/07/19 19:53:18 by modat            ###   ########.fr       */
+/*   Created: 2025/07/19 20:00:53 by modat             #+#    #+#             */
+/*   Updated: 2025/07/19 20:01:01 by modat            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "../../libft/libft.h"
 
-int main(void)
+int	putchar_fd_invalid_fd_test(void)
 {
-    char *str = "Hello, World!\n";
-    write(1, str, 14);
-    return (0);
+	ft_putchar_fd('C', -1);
+	ft_putchar_fd('E', 9999);
+	return (0);
 }

@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   02_lowercase_test.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: modat <modat@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 00:35:51 by rsrour            #+#    #+#             */
-/*   Updated: 2025/07/19 19:53:18 by modat            ###   ########.fr       */
+/*   Created: 2025/07/19 19:39:33 by modat             #+#    #+#             */
+/*   Updated: 2025/07/19 19:39:44 by modat            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "../../libft/libft.h"
 
-int main(void)
+int	tolower_lowercase_test(void)
 {
-    char *str = "Hello, World!\n";
-    write(1, str, 14);
-    return (0);
+	if (ft_tolower('a') == 'a')
+		return (0);
+	return (-1);
 }

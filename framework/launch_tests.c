@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   launch_tests.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsrour <rsrour@student.42.fr>              +#+  +:+       +#+        */
+/*   By: modat <modat@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 16:42:45 by modat             #+#    #+#             */
-/*   Updated: 2025/07/19 14:58:18 by rsrour           ###   ########.fr       */
+/*   Updated: 2025/07/19 18:26:39 by modat            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,12 +65,12 @@ static void	print_summary(int passed, int total)
 	ft_putendl_fd(" tests checked", 1);
 }
 
-static void	clear_tests(t_list **testlist)
+static void	clear_tests(t_list **test_list)
 {
-	ft_lstclear(testlist, free_unit_test_content);
+	ft_lstclear(test_list, free_unit_test_content);
 }
 
-int	launch_tests(const char *suite_name, t_list **testlist)
+int	launch_tests(const char *suite_name, t_list **test_list)
 {
 	t_list		*node;
 	t_unit_test	*test_data;
@@ -79,7 +79,7 @@ int	launch_tests(const char *suite_name, t_list **testlist)
 	int			result;
 	int			status;
 
-	node = *testlist;
+	node = *test_list;
 	total = 0;
 	passed = 0;
 	result = 0;
@@ -95,7 +95,7 @@ int	launch_tests(const char *suite_name, t_list **testlist)
 		node = node->next;
 	}
 	print_summary(passed, total);
-	clear_tests(testlist);
+	clear_tests(test_list);
 	return (result);
 }
 

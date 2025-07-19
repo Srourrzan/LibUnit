@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   03_long_string_test.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: modat <modat@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 00:35:51 by rsrour            #+#    #+#             */
-/*   Updated: 2025/07/19 19:53:18 by modat            ###   ########.fr       */
+/*   Created: 2025/07/19 20:03:10 by modat             #+#    #+#             */
+/*   Updated: 2025/07/19 20:03:18 by modat            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "../../libft/libft.h"
 
-int main(void)
+int	strlen_long_string_test(void)
 {
-    char *str = "Hello, World!\n";
-    write(1, str, 14);
-    return (0);
+	const char	*long_str = "01234567890123456789012345678901234567890123456789";
+	if (ft_strlen(long_str) == 50)
+		return (0);
+	return (-1);
 }
